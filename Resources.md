@@ -1,0 +1,1 @@
+[App Store review Guidelines](https://developer.apple.com/app-store/review/guidelines/)
