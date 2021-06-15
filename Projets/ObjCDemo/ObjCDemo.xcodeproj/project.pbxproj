@@ -17,6 +17,7 @@
 		3328F9D726775DA4008D248F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3328F9D526775DA4008D248F /* LaunchScreen.storyboard */; };
 		3328F9DA26775DA4008D248F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3328F9D926775DA4008D248F /* main.m */; };
 		3328F9E226778886008D248F /* LOLMeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3328F9E126778886008D248F /* LOLMeal.m */; };
+		33678FD52678B98F007FBD38 /* LOLUIComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 33678FD42678B98F007FBD38 /* LOLUIComponents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		3328F9D926775DA4008D248F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3328F9E026778886008D248F /* LOLMeal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOLMeal.h; sourceTree = "<group>"; };
 		3328F9E126778886008D248F /* LOLMeal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOLMeal.m; sourceTree = "<group>"; };
+		33678FD32678B98F007FBD38 /* LOLUIComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOLUIComponents.h; sourceTree = "<group>"; };
+		33678FD42678B98F007FBD38 /* LOLUIComponents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOLUIComponents.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 				3328F9CB26775DA2008D248F /* SceneDelegate.m */,
 				3328F9CD26775DA2008D248F /* ViewController.h */,
 				3328F9CE26775DA2008D248F /* ViewController.m */,
+				33678FD32678B98F007FBD38 /* LOLUIComponents.h */,
+				33678FD42678B98F007FBD38 /* LOLUIComponents.m */,
 				3328F9E026778886008D248F /* LOLMeal.h */,
 				3328F9E126778886008D248F /* LOLMeal.m */,
 				33003AB42677A1F9006CA123 /* LOLRestaurant.h */,
@@ -162,6 +167,7 @@
 				3328F9CF26775DA2008D248F /* ViewController.m in Sources */,
 				3328F9C926775DA2008D248F /* AppDelegate.m in Sources */,
 				33003AB62677A1F9006CA123 /* LOLRestaurant.m in Sources */,
+				33678FD52678B98F007FBD38 /* LOLUIComponents.m in Sources */,
 				3328F9E226778886008D248F /* LOLMeal.m in Sources */,
 				3328F9DA26775DA4008D248F /* main.m in Sources */,
 				3328F9CC26775DA2008D248F /* SceneDelegate.m in Sources */,

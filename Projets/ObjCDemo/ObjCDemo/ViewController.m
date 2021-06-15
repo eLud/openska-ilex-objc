@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "LOLMeal.h"
+#import "LOLUIComponents.h"
 
 //Interface "privée"
 //Inconnue des autres
@@ -21,39 +22,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    LOLMeal *pizza = [[LOLMeal alloc] initWithName:@"Pizza" andPrice:10];
-//    LOLMeal *nilMeal = [[LOLMeal alloc] init];
+    NSLog(@"Hello world");
 
-    NSMutableString *mutString = [NSMutableString stringWithString:@"Hello"];
-    [mutString appendString:@" World"];
+    UIButton *myButton = [LOLUIComponents styledButtonWithTint:UIColor.redColor andBackground:UIColor.blueColor];
 
-    NSRange range = NSMakeRange(0, 5);
-    [mutString replaceCharactersInRange:NSMakeRange(0, 5) withString:@"Salut"];
-    NSLog(@"%@", mutString);
+    [self.view addSubview:myButton];
 
-    NSArray *array = [[NSArray alloc] initWithObjects:@"A", @"B", @"C", nil];
-    NSArray *array2 = [NSArray arrayWithObjects:@"A",@"B",@"C", nil];
-    NSArray <NSString *> *array3 = @[@"A", @"B", @"C"];
+    LOLMeal *myMeal = [[LOLMeal alloc] initWithName:@"Test" andPrice:20];
 
-    NSString *letter = [array3 objectAtIndex:2];
-    NSString *letter2 = array3[2];
-
-    NSDictionary *dico = [[NSDictionary alloc]
-                          initWithObjectsAndKeys:@"Ludovic", @"firstName", nil];
-    NSDictionary <NSString *, NSString *> *dico2 = @{@"firstName" : @"Ludovic", @"lastName" : @"Ollagnier"};
-
-    NSString *fName = [dico2 objectForKey:@"firstName"];
-    NSString *fName2 = dico2[@"firstName"];
-
-    NSNumber *one = [NSNumber numberWithInt:1];
-    NSNumber *two = @2;
-    NSNumber *floatNumber = @2.5;
-
-    BOOL isAwake = NO;
-
-    NSNumber *boolNumber = @NO;
-
-    NSLog(@"%f", floatNumber.floatValue);
-
+    BOOL result = [myMeal respondsToSelector:@selector(copyWithZone:)];
+    NSLog(@"%d", result);
+    if (result) {
+        LOLMeal *myCopy = [myMeal copy];
+    }
 }
+
 @end
