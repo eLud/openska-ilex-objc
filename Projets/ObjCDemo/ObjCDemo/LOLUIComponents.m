@@ -11,7 +11,7 @@
 
 + (UIButton *)styledButtonWithTint:(UIColor *)tintColor andBackground:(UIColor *)backgroundColor {
 
-    UIButton *myButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];
+    UIButton *myButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 400, 200, 50)];
     [myButton setTitle:@"Button" forState:UIControlStateNormal];
     [myButton setBackgroundColor: backgroundColor];
     [myButton setTintColor: UIColor.blackColor];
