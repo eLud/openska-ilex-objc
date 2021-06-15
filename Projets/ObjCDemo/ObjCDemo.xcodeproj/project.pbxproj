@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		33003AB62677A1F9006CA123 /* LOLRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 33003AB52677A1F9006CA123 /* LOLRestaurant.m */; };
+		33003AB82678AFAC006CA123 /* UIDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33003AB72678AFAC006CA123 /* UIDemo.xib */; };
 		3328F9C926775DA2008D248F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3328F9C826775DA2008D248F /* AppDelegate.m */; };
 		3328F9CC26775DA2008D248F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3328F9CB26775DA2008D248F /* SceneDelegate.m */; };
 		3328F9CF26775DA2008D248F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3328F9CE26775DA2008D248F /* ViewController.m */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		33003AB42677A1F9006CA123 /* LOLRestaurant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOLRestaurant.h; sourceTree = "<group>"; };
 		33003AB52677A1F9006CA123 /* LOLRestaurant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOLRestaurant.m; sourceTree = "<group>"; };
+		33003AB72678AFAC006CA123 /* UIDemo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIDemo.xib; sourceTree = "<group>"; };
 		3328F9C426775DA2008D248F /* ObjCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3328F9C726775DA2008D248F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3328F9C826775DA2008D248F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				33003AB42677A1F9006CA123 /* LOLRestaurant.h */,
 				33003AB52677A1F9006CA123 /* LOLRestaurant.m */,
 				3328F9D026775DA2008D248F /* Main.storyboard */,
+				33003AB72678AFAC006CA123 /* UIDemo.xib */,
 				3328F9D326775DA4008D248F /* Assets.xcassets */,
 				3328F9D526775DA4008D248F /* LaunchScreen.storyboard */,
 				3328F9D826775DA4008D248F /* Info.plist */,
@@ -144,6 +147,7 @@
 			files = (
 				3328F9D726775DA4008D248F /* LaunchScreen.storyboard in Resources */,
 				3328F9D426775DA4008D248F /* Assets.xcassets in Resources */,
+				33003AB82678AFAC006CA123 /* UIDemo.xib in Resources */,
 				3328F9D226775DA2008D248F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				INFOPLIST_FILE = ObjCDemo/Info.plist;
@@ -321,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				INFOPLIST_FILE = ObjCDemo/Info.plist;
