@@ -32,6 +32,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+
+    UIButton *myButtonFromCode = [LOLUIComponents styledButtonWithTint:UIColor.redColor andBackground:UIColor.blueColor];
+    [self.view addSubview:myButtonFromCode];
+
+    [myButtonFromCode setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+    NSLayoutConstraint *top = [[myButtonFromCode centerYAnchor] constraintEqualToAnchor:[self.saveButton centerYAnchor]];
+    NSLayoutConstraint *leading = [[myButtonFromCode leadingAnchor] constraintEqualToSystemSpacingAfterAnchor: [self.view leadingAnchor] multiplier:1];
+    [top setActive:YES];
+    [leading setActive:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
