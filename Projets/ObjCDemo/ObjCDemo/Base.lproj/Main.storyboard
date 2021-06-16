@@ -10,6 +10,33 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="p8m-se-fPm">
+            <objects>
+                <viewController id="TRv-Oc-yAs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MQq-LR-Wf7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIS-Sz-zMD">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hxL-9z-Pcr"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="hIS-Sz-zMD" firstAttribute="top" secondItem="hxL-9z-Pcr" secondAttribute="top" id="5Ir-zC-1fH"/>
+                            <constraint firstItem="hxL-9z-Pcr" firstAttribute="trailing" secondItem="hIS-Sz-zMD" secondAttribute="trailing" id="BTm-vR-wuB"/>
+                            <constraint firstItem="hIS-Sz-zMD" firstAttribute="leading" secondItem="hxL-9z-Pcr" secondAttribute="leading" id="Nwp-1G-aNi"/>
+                            <constraint firstItem="hxL-9z-Pcr" firstAttribute="bottom" secondItem="hIS-Sz-zMD" secondAttribute="bottom" id="sve-D1-ImN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qt6-G1-myL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="-273"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -61,6 +88,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1l-MC-jPG">
+                                        <rect key="frame" x="0.0" y="195" width="335" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact" hidden="NO"/>
+                                    </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HJL-sY-A0u">
                                         <rect key="frame" x="0.0" y="205" width="335" height="200"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,6 +106,7 @@
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="heightClass=compact" hidden="YES"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Oxo-YU-BLE">
                                         <rect key="frame" x="0.0" y="425" width="335" height="59.333333333333314"/>
@@ -151,6 +185,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *priceTextField;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
+@property (strong, nonatomic) UIButton *fromCodeButton;
+
 @end
 
 //Implémentation
@@ -42,6 +44,11 @@
     NSLayoutConstraint *leading = [[myButtonFromCode leadingAnchor] constraintEqualToSystemSpacingAfterAnchor: [self.view leadingAnchor] multiplier:1];
     [top setActive:YES];
     [leading setActive:YES];
+
+    self.fromCodeButton = myButtonFromCode;
+
+    //KVO : Key Value Observing
+    [self.fromCodeButton addObserver:self forKeyPath:@"hidden" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -69,6 +76,8 @@
 
 - (IBAction)saveMeal:(UIButton *)sender {
 
+    self.fromCodeButton.hidden = YES;
+
     NSString *name = self.nameTextField.text;
     NSString *pitch = self.pitchTextField.text;
     NSString *desc = self.descriptionTextView.text;
@@ -82,6 +91,24 @@
 
     [self.restaurant addMeal:newMeal];
     NSLog(@"%@", self.restaurant.meals);
+}
+
+
+-(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+
+    //    [previousTraitCollection horizontalSizeClass];
+    if ([[self traitCollection] verticalSizeClass] == UIUserInterfaceSizeClassCompact) {
+        self.view.backgroundColor = UIColor.redColor;
+    } else {
+        self.view.backgroundColor = UIColor.systemBackgroundColor;
+    }
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    NSLog(@"%@", keyPath);
+    NSLog(@"%@", object);
+    NSLog(@"%@", change);
 }
 
 #pragma mark - Lazy instaniation
