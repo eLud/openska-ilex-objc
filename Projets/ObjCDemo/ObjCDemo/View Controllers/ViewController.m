@@ -47,8 +47,6 @@
 
     //KVO : Key Value Observing
     [self.fromCodeButton addObserver:self forKeyPath:@"hidden" options:NSKeyValueObservingOptionNew context:nil];
-
-    self.nameTextField.text  = self.message;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

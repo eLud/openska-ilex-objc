@@ -13,7 +13,6 @@
 //Ce qu'on montre aux autres
 @interface ViewController : UIViewController
 
-@property (copy, nonatomic) NSString *message;
 @property (strong, nonatomic) LOLRestaurant *restaurant;
 
 @end

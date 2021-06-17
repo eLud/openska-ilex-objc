@@ -33,6 +33,11 @@
 
     // Penser à définir le datasource par le code ou le storyboard
     self.tableView.dataSource = self;
+
+    NSNotificationCenter *notCenter = [NSNotificationCenter defaultCenter];
+    [notCenter addObserverForName:@"modelUpdated" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -41,10 +46,14 @@
 //    [self performSegueWithIdentifier:@"manual" sender:nil];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+
+}
+
 - (IBAction)presentFormFromCode:(UIButton *)sender {
 
     ViewController *vc = [[self storyboard] instantiateViewControllerWithIdentifier:@"ViewController"];
-    vc.message = @"From code";
+//    vc.message = @"From code";
 
     [self presentViewController:vc animated:YES completion:nil];
 
@@ -84,8 +93,10 @@
     // Pass the selected object to the new view controller.
 
     if ([segue.identifier isEqualToString:@"showForm"]) {
+        
         ViewController *destination = segue.destinationViewController;
-        destination.message = @"From storyboard";
+        destination.restaurant = self.restaurant;
+
     } else if ([segue.identifier isEqualToString:@"showDetails"]) {
         if (![sender isKindOfClass:[UITableViewCell class]]) {
             return;
@@ -99,6 +110,9 @@
 
         MealDetailsViewController *destination = segue.destinationViewController;
         destination.meal = currentMeal;
+
+        // Useless if using a UITableViewController
+        [self.tableView deselectRowAtIndexPath:ip animated:NO];
     }
 
 }

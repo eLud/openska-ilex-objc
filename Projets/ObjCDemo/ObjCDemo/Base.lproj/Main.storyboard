@@ -92,10 +92,16 @@
                             <constraint firstItem="OIc-bZ-XIk" firstAttribute="top" secondItem="MQq-LR-Wf7" secondAttribute="top" id="pDS-H3-4AE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Zgr-7D-rXs"/>
+                    <navigationItem key="navigationItem" id="Zgr-7D-rXs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="p6T-j7-gMW">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="showForm" id="Gxd-rV-814"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="OIc-bZ-XIk" id="1vC-Z5-qpg"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="manual" id="4Fv-fh-k7L"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="manual" id="4Fv-fh-k7L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qt6-G1-myL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,11 +113,11 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VkV-yy-Qyk">
-                                <rect key="frame" x="20" y="138" width="350" height="566.66666666666663"/>
+                                <rect key="frame" x="20" y="50" width="350" height="566.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="chM-t6-WwZ">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="62.333333333333336"/>
@@ -124,7 +130,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iEF-Ld-A1g">
-                                                <rect key="frame" x="0.0" y="28.333333333333343" width="350" height="34"/>
+                                                <rect key="frame" x="0.0" y="28.333333333333329" width="350" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="google" textContentType="name"/>
                                             </textField>
@@ -149,7 +155,7 @@
                                         <variation key="heightClass=compact" axis="horizontal"/>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detailed description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3h-RQ-4NQ">
-                                        <rect key="frame" x="0.0" y="164.66666666666669" width="350" height="20.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="164.66666666666666" width="350" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -184,7 +190,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQ3-wC-91W">
-                                                <rect key="frame" x="0.0" y="28.333333333333371" width="352" height="31"/>
+                                                <rect key="frame" x="0.0" y="28.333333333333314" width="352" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -213,7 +219,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjQ-nD-l69">
-                                <rect key="frame" x="336" y="88" width="34" height="30"/>
+                                <rect key="frame" x="336" y="0.0" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveMeal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QT6-FA-L1a"/>
@@ -316,6 +322,9 @@
             <point key="canvasLocation" x="-500" y="-273.69668246445497"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Gxd-rV-814"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
