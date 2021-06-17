@@ -14,8 +14,6 @@
 //Inconnue des autres
 @interface ViewController ()
 
-@property (strong, nonatomic) LOLRestaurant *restaurant;
-
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pitchTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
@@ -49,11 +47,12 @@
 
     //KVO : Key Value Observing
     [self.fromCodeButton addObserver:self forKeyPath:@"hidden" options:NSKeyValueObservingOptionNew context:nil];
+
+    self.nameTextField.text  = self.message;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -91,6 +90,8 @@
 
     [self.restaurant addMeal:newMeal];
     NSLog(@"%@", self.restaurant.meals);
+
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -109,6 +110,10 @@
     NSLog(@"%@", keyPath);
     NSLog(@"%@", object);
     NSLog(@"%@", change);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
 }
 
 #pragma mark - Lazy instaniation

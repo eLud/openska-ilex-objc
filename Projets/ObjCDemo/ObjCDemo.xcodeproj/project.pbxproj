@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33003AB62677A1F9006CA123 /* LOLRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 33003AB52677A1F9006CA123 /* LOLRestaurant.m */; };
 		33003AB82678AFAC006CA123 /* UIDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33003AB72678AFAC006CA123 /* UIDemo.xib */; };
+		332288EF267A390F00B793C8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332288EE267A390F00B793C8 /* FirstViewController.m */; };
 		3328F9C926775DA2008D248F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3328F9C826775DA2008D248F /* AppDelegate.m */; };
 		3328F9CC26775DA2008D248F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3328F9CB26775DA2008D248F /* SceneDelegate.m */; };
 		3328F9CF26775DA2008D248F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3328F9CE26775DA2008D248F /* ViewController.m */; };
@@ -24,6 +25,8 @@
 		33003AB42677A1F9006CA123 /* LOLRestaurant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOLRestaurant.h; sourceTree = "<group>"; };
 		33003AB52677A1F9006CA123 /* LOLRestaurant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOLRestaurant.m; sourceTree = "<group>"; };
 		33003AB72678AFAC006CA123 /* UIDemo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIDemo.xib; sourceTree = "<group>"; };
+		332288ED267A390F00B793C8 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		332288EE267A390F00B793C8 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		3328F9C426775DA2008D248F /* ObjCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3328F9C726775DA2008D248F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3328F9C826775DA2008D248F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 			children = (
 				3328F9CD26775DA2008D248F /* ViewController.h */,
 				3328F9CE26775DA2008D248F /* ViewController.m */,
+				332288ED267A390F00B793C8 /* FirstViewController.h */,
+				332288EE267A390F00B793C8 /* FirstViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				3328F9E226778886008D248F /* LOLMeal.m in Sources */,
 				3328F9DA26775DA4008D248F /* main.m in Sources */,
 				3328F9CC26775DA2008D248F /* SceneDelegate.m in Sources */,
+				332288EF267A390F00B793C8 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
