@@ -77,6 +77,7 @@
                                             <outlet property="nameLabel" destination="sbh-F2-TGa" id="yjH-F5-vyr"/>
                                             <outlet property="pitchLabel" destination="r5b-IX-Iuz" id="2Sx-m8-VVe"/>
                                             <outlet property="priceLabel" destination="DT4-jb-MyI" id="pn0-kH-HXy"/>
+                                            <segue destination="PEJ-32-suy" kind="show" identifier="showDetails" id="DRS-q4-8l8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -243,6 +244,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2336.9230769230767" y="-272.98578199052133"/>
+        </scene>
+        <!--Meal Details View Controller-->
+        <scene sceneID="ehl-c3-9xG">
+            <objects>
+                <viewController id="PEJ-32-suy" customClass="MealDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KiI-83-Xux">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="glc-ae-F4f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rBN-MX-4IY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Klf-Ji-xJ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2337" y="473"/>
         </scene>
         <!--Restaurants-->
         <scene sceneID="967-AU-nsY">

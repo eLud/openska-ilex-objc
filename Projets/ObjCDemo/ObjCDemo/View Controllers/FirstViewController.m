@@ -8,10 +8,13 @@
 #import "FirstViewController.h"
 #import "ViewController.h"
 #import "MaCustomTableViewCell.h"
+#import "LOLRestaurant.h"
+#import "MealDetailsViewController.h"
 
 @interface FirstViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) LOLRestaurant *restaurant;
 
 @end
 
@@ -20,6 +23,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+
+    LOLMeal *meal1 = [[LOLMeal alloc] initWithName:@"Pizza" pitch:@"Un morceau d'Italie" preciseDescription:@"" veggie:YES andPrice:9.5];
+    LOLMeal *meal2 = [[LOLMeal alloc] initWithName:@"Steak frites" pitch:@"Un morceau de viande" preciseDescription:@"" veggie:NO andPrice:12.5];
+
+    [self.restaurant addMeal:meal1];
+    [self.restaurant addMeal:meal2];
 
     // Penser à définir le datasource par le code ou le storyboard
     self.tableView.dataSource = self;
@@ -45,13 +55,23 @@
 #pragma mark - UITableVIewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1000;
+    return self.restaurant.meals.count;
+//    return [[[self restaurant] meals] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     MaCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mealCell" forIndexPath:indexPath];
-    cell.nameLabel.text = @"Hello";
+
+    LOLMeal *currentMeal = self.restaurant.meals[indexPath.row];
+    NSString *price = [NSString stringWithFormat:@"%.2f", currentMeal.price];
+
+    UIImage *image = nil;
+    if (currentMeal.isVeggie) {
+        image = [UIImage systemImageNamed:@"leaf"];
+    }
+
+    [cell configureWithName:currentMeal.name pitch:currentMeal.pitch price:price andImage:image];
 
     return cell;
 }
@@ -66,9 +86,30 @@
     if ([segue.identifier isEqualToString:@"showForm"]) {
         ViewController *destination = segue.destinationViewController;
         destination.message = @"From storyboard";
+    } else if ([segue.identifier isEqualToString:@"showDetails"]) {
+        if (![sender isKindOfClass:[UITableViewCell class]]) {
+            return;
+        }
+
+        UITableViewCell *cell = sender;
+        NSIndexPath *ip = [self.tableView indexPathForCell:cell];
+        LOLMeal *currentMeal = self.restaurant.meals[ip.row];
+
+//        UITableViewCell *cell2 = [self.tableView indexPathForSelectedRow];
+
+        MealDetailsViewController *destination = segue.destinationViewController;
+        destination.meal = currentMeal;
     }
 
 }
 
+#pragma mark - Lazy instaniation
+
+- (LOLRestaurant *)restaurant {
+    if (!_restaurant) {
+        _restaurant = [[LOLRestaurant alloc] initWithName:@"Resto name"];
+    }
+    return _restaurant;
+}
 
 @end

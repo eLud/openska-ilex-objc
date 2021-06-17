@@ -116,12 +116,4 @@
     
 }
 
-#pragma mark - Lazy instaniation
-
-- (LOLRestaurant *)restaurant {
-    if (!_restaurant) {
-        _restaurant = [[LOLRestaurant alloc] initWithName:@"Resto name"];
-    }
-    return _restaurant;
-}
 @end
