@@ -7,8 +7,11 @@
 
 #import "FirstViewController.h"
 #import "ViewController.h"
+#import "MaCustomTableViewCell.h"
 
 @interface FirstViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -18,6 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    // Penser à définir le datasource par le code ou le storyboard
+    self.tableView.dataSource = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -35,6 +40,20 @@
 
 //    [self showViewController:vc sender:nil];
 //    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - UITableVIewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1000;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    MaCustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mealCell" forIndexPath:indexPath];
+    cell.nameLabel.text = @"Hello";
+
+    return cell;
 }
 
 #pragma mark - Navigation

@@ -15,7 +15,18 @@
 		3322890C267B3E8500B793C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3322890A267B3E8500B793C8 /* LaunchScreen.storyboard */; };
 		3322890F267B3E8500B793C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3322890E267B3E8500B793C8 /* main.m */; };
 		33228917267B3E9A00B793C8 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = 33228916267B3E9A00B793C8 /* Human.m */; };
+		3322891F267B48F700B793C8 /* Memory_managementUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3322891E267B48F700B793C8 /* Memory_managementUITests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33228921267B48F700B793C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 332288F1267B3E7F00B793C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 332288F8267B3E8000B793C8;
+			remoteInfo = "Memory management";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		332288F9267B3E8000B793C8 /* Memory management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memory management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +43,20 @@
 		3322890E267B3E8500B793C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33228915267B3E9A00B793C8 /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
 		33228916267B3E9A00B793C8 /* Human.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
+		3322891C267B48F700B793C8 /* Memory managementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Memory managementUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3322891E267B48F700B793C8 /* Memory_managementUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Memory_managementUITests.m; sourceTree = "<group>"; };
+		33228920267B48F700B793C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		332288F6267B3E8000B793C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33228919267B48F700B793C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				332288FB267B3E8000B793C8 /* Memory management */,
+				3322891D267B48F700B793C8 /* Memory managementUITests */,
 				332288FA267B3E8000B793C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				332288F9267B3E8000B793C8 /* Memory management.app */,
+				3322891C267B48F700B793C8 /* Memory managementUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +104,15 @@
 			path = "Memory management";
 			sourceTree = "<group>";
 		};
+		3322891D267B48F700B793C8 /* Memory managementUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3322891E267B48F700B793C8 /* Memory_managementUITests.m */,
+				33228920267B48F700B793C8 /* Info.plist */,
+			);
+			path = "Memory managementUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,6 +133,24 @@
 			productReference = 332288F9267B3E8000B793C8 /* Memory management.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3322891B267B48F700B793C8 /* Memory managementUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33228923267B48F700B793C8 /* Build configuration list for PBXNativeTarget "Memory managementUITests" */;
+			buildPhases = (
+				33228918267B48F700B793C8 /* Sources */,
+				33228919267B48F700B793C8 /* Frameworks */,
+				3322891A267B48F700B793C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33228922267B48F700B793C8 /* PBXTargetDependency */,
+			);
+			name = "Memory managementUITests";
+			productName = "Memory managementUITests";
+			productReference = 3322891C267B48F700B793C8 /* Memory managementUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,6 +161,10 @@
 				TargetAttributes = {
 					332288F8267B3E8000B793C8 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					3322891B267B48F700B793C8 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 332288F8267B3E8000B793C8;
 					};
 				};
 			};
@@ -128,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				332288F8267B3E8000B793C8 /* Memory management */,
+				3322891B267B48F700B793C8 /* Memory managementUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +195,13 @@
 				3322890C267B3E8500B793C8 /* LaunchScreen.storyboard in Resources */,
 				33228909267B3E8500B793C8 /* Assets.xcassets in Resources */,
 				33228907267B3E8000B793C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3322891A267B48F700B793C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +220,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33228918267B48F700B793C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3322891F267B48F700B793C8 /* Memory_managementUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33228922267B48F700B793C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 332288F8267B3E8000B793C8 /* Memory management */;
+			targetProxy = 33228921267B48F700B793C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		33228905267B3E8000B793C8 /* Main.storyboard */ = {
@@ -328,6 +406,42 @@
 			};
 			name = Release;
 		};
+		33228924267B48F700B793C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				INFOPLIST_FILE = "Memory managementUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tectec.Memory-managementUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Memory management";
+			};
+			name = Debug;
+		};
+		33228925267B48F700B793C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				INFOPLIST_FILE = "Memory managementUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tectec.Memory-managementUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Memory management";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,6 +459,15 @@
 			buildConfigurations = (
 				33228913267B3E8500B793C8 /* Debug */,
 				33228914267B3E8500B793C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33228923267B48F700B793C8 /* Build configuration list for PBXNativeTarget "Memory managementUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33228924267B48F700B793C8 /* Debug */,
+				33228925267B48F700B793C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -18,9 +18,9 @@
     return self;
 }
 
-- (void)dealloc
-{
-    NSLog(@"Deallocating %@", _name);
-}
+//- (void)dealloc
+//{
+//    NSLog(@"Deallocating %@", _name);
+//}
 
 @end

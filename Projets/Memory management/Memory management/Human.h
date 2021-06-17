@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic, nullable) Human *child;
-@property (weak, nonatomic, nullable) Human *father;
+@property (strong, nonatomic, nullable) Human *father;
 
 - (instancetype)initWithName:(NSString*)name;
 

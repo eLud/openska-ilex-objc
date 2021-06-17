@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UITableViewDataSource>
 
 @end
 

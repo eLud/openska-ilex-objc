@@ -19,6 +19,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNk-m1-b5d">
                                 <rect key="frame" x="159" y="308" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="create-human" label="Create Human"/>
                                 <state key="normal" title="Create human"/>
                                 <connections>
                                     <action selector="createHuman:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jzj-n4-w5y"/>
@@ -27,6 +28,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH4-Zx-13Q">
                                 <rect key="frame" x="162" y="369" width="91" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="create-family" label="Create family"/>
                                 <state key="normal" title="Create family"/>
                                 <connections>
                                     <action selector="createFamily:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FtA-6D-VCf"/>
