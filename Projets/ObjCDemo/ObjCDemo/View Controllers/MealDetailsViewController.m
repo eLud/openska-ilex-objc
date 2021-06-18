@@ -8,6 +8,9 @@
 #import "MealDetailsViewController.h"
 #import "LOLMeal.h"
 
+//@import AFNetworking;
+#import <AFNetworking.h>
+
 @interface MealDetailsViewController () <NSURLSessionDelegate, NSURLSessionDataDelegate>
 
 @property (strong, nonatomic) NSURLSession *session;
@@ -29,7 +32,6 @@
 - (IBAction)request:(UIButton *)sender {
 
 //    NSURLSession *sharedSession = [NSURLSession sharedSession];
-
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     [config setHTTPAdditionalHeaders:@{@"HEADERCUSTOM":@"AZERTYUIOP"}];
     [config setAllowsCellularAccess:NO];

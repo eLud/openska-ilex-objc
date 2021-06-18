@@ -10,6 +10,7 @@
 #import "MaCustomTableViewCell.h"
 #import "LOLRestaurant.h"
 #import "MealDetailsViewController.h"
+#import <DemoFramework/DemoFramework.h>
 
 @interface FirstViewController ()
 
@@ -23,7 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
 
     LOLMeal *meal1 = [[LOLMeal alloc] initWithName:@"Pizza" pitch:@"Un morceau d'Italie" preciseDescription:@"" veggie:YES andPrice:9.5];
     LOLMeal *meal2 = [[LOLMeal alloc] initWithName:@"Steak frites" pitch:@"Un morceau de viande" preciseDescription:@"" veggie:NO andPrice:12.5];
@@ -41,6 +41,9 @@
 
     [notCenter addObserver:self selector:@selector(dataUpdated:) name:@"modelUpdated" object:nil];
 //    [notCenter addObserver:self.tableView selector:@selector(reloadData:) name:@"modelUpdated" object:nil];
+
+    LOLNetworkRequester *requester = [[LOLNetworkRequester alloc]init];
+    NSString* cfg = [requester configString];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

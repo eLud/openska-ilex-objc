@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,7 +22,24 @@
 		3328F9E226778886008D248F /* LOLMeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3328F9E126778886008D248F /* LOLMeal.m */; };
 		33678FD52678B98F007FBD38 /* LOLUIComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 33678FD42678B98F007FBD38 /* LOLUIComponents.m */; };
 		33685227267C92FC00B29A2E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33685225267C92FC00B29A2E /* Localizable.strings */; };
+		3368522B267CE31600B29A2E /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 3368522A267CE31600B29A2E /* AFNetworking */; };
+		3368525D267CEA4E00B29A2E /* DemoFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3368525C267CEA4E00B29A2E /* DemoFramework.framework */; };
+		3368525E267CEA4E00B29A2E /* DemoFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3368525C267CEA4E00B29A2E /* DemoFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3368525F267CEA4E00B29A2E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3368525E267CEA4E00B29A2E /* DemoFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		33003AB42677A1F9006CA123 /* LOLRestaurant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOLRestaurant.h; sourceTree = "<group>"; };
@@ -53,6 +70,7 @@
 		33685224267C912900B29A2E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		33685226267C92FC00B29A2E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		33685228267CABD300B29A2E /* ObjCDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ObjCDemo.entitlements; sourceTree = "<group>"; };
+		3368525C267CEA4E00B29A2E /* DemoFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DemoFramework.framework; path = ObjCDemo/DemoFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3368525D267CEA4E00B29A2E /* DemoFramework.framework in Frameworks */,
+				3368522B267CE31600B29A2E /* AFNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +124,7 @@
 			children = (
 				3328F9C626775DA2008D248F /* ObjCDemo */,
 				3328F9C526775DA2008D248F /* Products */,
+				3368524B267CE7F000B29A2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +160,14 @@
 			path = ObjCDemo;
 			sourceTree = "<group>";
 		};
+		3368524B267CE7F000B29A2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3368525C267CEA4E00B29A2E /* DemoFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,12 +178,16 @@
 				3328F9C026775DA2008D248F /* Sources */,
 				3328F9C126775DA2008D248F /* Frameworks */,
 				3328F9C226775DA2008D248F /* Resources */,
+				3368525F267CEA4E00B29A2E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ObjCDemo;
+			packageProductDependencies = (
+				3368522A267CE31600B29A2E /* AFNetworking */,
+			);
 			productName = ObjCDemo;
 			productReference = 3328F9C426775DA2008D248F /* ObjCDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +215,9 @@
 				fr,
 			);
 			mainGroup = 3328F9BB26775DA1008D248F;
+			packageReferences = (
+				33685229267CE31600B29A2E /* XCRemoteSwiftPackageReference "AFNetworking" */,
+			);
 			productRefGroup = 3328F9C526775DA2008D248F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -378,6 +414,10 @@
 				CODE_SIGN_ENTITLEMENTS = ObjCDemo/ObjCDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ObjCDemo",
+				);
 				INFOPLIST_FILE = ObjCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -398,6 +438,10 @@
 				CODE_SIGN_ENTITLEMENTS = ObjCDemo/ObjCDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ObjCDemo",
+				);
 				INFOPLIST_FILE = ObjCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -431,6 +475,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33685229267CE31600B29A2E /* XCRemoteSwiftPackageReference "AFNetworking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AFNetworking/AFNetworking.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3368522A267CE31600B29A2E /* AFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33685229267CE31600B29A2E /* XCRemoteSwiftPackageReference "AFNetworking" */;
+			productName = AFNetworking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3328F9BC26775DA1008D248F /* Project object */;
 }
