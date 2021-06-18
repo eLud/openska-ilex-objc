@@ -52,6 +52,7 @@
 		33678FD42678B98F007FBD38 /* LOLUIComponents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOLUIComponents.m; sourceTree = "<group>"; };
 		33685224267C912900B29A2E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		33685226267C92FC00B29A2E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		33685228267CABD300B29A2E /* ObjCDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ObjCDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 		3328F9C626775DA2008D248F /* ObjCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				33685228267CABD300B29A2E /* ObjCDemo.entitlements */,
 				3328F9C726775DA2008D248F /* AppDelegate.h */,
 				3328F9C826775DA2008D248F /* AppDelegate.m */,
 				3328F9CA26775DA2008D248F /* SceneDelegate.h */,
@@ -373,6 +375,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
+				CODE_SIGN_ENTITLEMENTS = ObjCDemo/ObjCDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				INFOPLIST_FILE = ObjCDemo/Info.plist;
@@ -392,6 +395,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
+				CODE_SIGN_ENTITLEMENTS = ObjCDemo/ObjCDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
 				INFOPLIST_FILE = ObjCDemo/Info.plist;
