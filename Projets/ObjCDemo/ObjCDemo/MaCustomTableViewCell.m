@@ -12,6 +12,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+
+    self.backgroundColor = [UIColor colorNamed:@"ilex-orange"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -5,3 +5,5 @@
 [All Apple Developer Downloads](https://developer.apple.com/download/all/)
 
 https://www.jetbrains.com/objc/
+
+https://support.apple.com/fr-fr/guide/security/welcome/1/web

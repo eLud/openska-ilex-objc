@@ -35,9 +35,12 @@
     self.tableView.dataSource = self;
 
     NSNotificationCenter *notCenter = [NSNotificationCenter defaultCenter];
-    [notCenter addObserverForName:@"modelUpdated" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
-        [self.tableView reloadData];
-    }];
+//    [notCenter addObserverForName:@"modelUpdated" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
+//        [self.tableView reloadData];
+//    }];
+
+    [notCenter addObserver:self selector:@selector(dataUpdated:) name:@"modelUpdated" object:nil];
+//    [notCenter addObserver:self.tableView selector:@selector(reloadData:) name:@"modelUpdated" object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -48,6 +51,14 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
 
+}
+
+- (void)dataUpdated:(NSNotification*)note {
+
+    LOLMeal *addedMeal = note.userInfo[@"newMeal"];
+    NSLog(@"%@", addedMeal.name);
+
+    [self.tableView reloadData];
 }
 
 - (IBAction)presentFormFromCode:(UIButton *)sender {

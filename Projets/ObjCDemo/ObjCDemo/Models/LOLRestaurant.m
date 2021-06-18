@@ -29,7 +29,7 @@
 //    [self.meals addObject:meal];
 
     NSNotificationCenter *notCenter = [NSNotificationCenter defaultCenter];
-    [notCenter postNotificationName:@"modelUpdated" object:self];
+    [notCenter postNotificationName:@"modelUpdated" object:self userInfo:@{@"newMeal":meal}];
 }
 
 - (NSMutableArray<LOLMeal *> *)meals {
