@@ -1,0 +1,36 @@
+/* Class = "UITabBarItem"; title = "Panier"; ObjectID = "2v2-Jr-Ner"; */
+"2v2-Jr-Ner.title" = "Panier";
+
+/* Class = "UILabel"; text = "Prix"; ObjectID = "DT4-jb-MyI"; */
+"DT4-jb-MyI.text" = "Prix";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "EHe-7b-Sbm"; */
+"EHe-7b-Sbm.text" = "Nom";
+
+/* Class = "UILabel"; text = "Pitch"; ObjectID = "GM4-Nn-bMg"; */
+"GM4-Nn-bMg.text" = "Résumé";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "HJL-sY-A0u"; */
+"HJL-sY-A0u.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Detailed description"; ObjectID = "r3h-RQ-4NQ"; */
+"r3h-RQ-4NQ.text" = "Description";
+
+/* Class = "UILabel"; text = "Pitch"; ObjectID = "r5b-IX-Iuz"; */
+"r5b-IX-Iuz.text" = "Pitch";
+
+/* Class = "UITabBarItem"; title = "Restaurants"; ObjectID = "s7e-2e-bh0"; */
+"s7e-2e-bh0.title" = "Restaurants";
+
+/* Class = "UILabel"; text = "Nom"; ObjectID = "sbh-F2-TGa"; */
+"sbh-F2-TGa.text" = "Nom";
+
+/* Class = "UILabel"; text = "Is veggie"; ObjectID = "uJR-Wo-OBu"; */
+"uJR-Wo-OBu.text" = "Is veggie";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "xyn-X5-d1K"; */
+"xyn-X5-d1K.text" = "Price";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "ZjQ-nD-l69"; */
+"ZjQ-nD-l69.normalTitle" = "Enregistrer";
+

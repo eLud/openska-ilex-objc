@@ -19,6 +19,8 @@
 
     NSLog(@"%@", self.meal);
     self.title = self.meal.name;
+
+    self.title = NSLocalizedString(@"MEAL_DETAILS_VIEW_TITLE", @"");
 }
 
 /*
